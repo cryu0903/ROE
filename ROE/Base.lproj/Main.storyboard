@@ -355,10 +355,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C4C-F7-ocO">
-                                <rect key="frame" x="87" y="211" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sad-ZD-GiO"/>
                         <color key="backgroundColor" red="0.96001203049999995" green="0.99833631460000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
