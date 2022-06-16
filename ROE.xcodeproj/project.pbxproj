@@ -468,6 +468,7 @@
 				DEVELOPMENT_TEAM = 3Q2QRXJ4ZP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ROE/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Our app uses you current locationto provide you with reproductive health resources in and around your area.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -496,6 +497,7 @@
 				DEVELOPMENT_TEAM = 3Q2QRXJ4ZP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ROE/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Our app uses you current locationto provide you with reproductive health resources in and around your area.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
