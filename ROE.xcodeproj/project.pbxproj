@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDE5A349285B0F8C009628CC /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A348285B0F8C009628CC /* EntryViewController.swift */; };
+		BDE5A34B285B1117009628CC /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE5A34A285B1117009628CC /* NoteViewController.swift */; };
 		BF8869112859046000ACF3BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8869102859046000ACF3BB /* AppDelegate.swift */; };
 		BF8869132859046000ACF3BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8869122859046000ACF3BB /* SceneDelegate.swift */; };
 		BF8869152859046000ACF3BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8869142859046000ACF3BB /* ViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDE5A348285B0F8C009628CC /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		BDE5A34A285B1117009628CC /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		BF88690D2859046000ACF3BB /* ROE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ROE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF8869102859046000ACF3BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF8869122859046000ACF3BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				BF8869122859046000ACF3BB /* SceneDelegate.swift */,
 				BF8869142859046000ACF3BB /* ViewController.swift */,
 				BF8869162859046000ACF3BB /* Main.storyboard */,
+				BDE5A34A285B1117009628CC /* NoteViewController.swift */,
 				EFAB080F285A2E8B00EF7D2D /* FurtherInfoViewController.swift */,
 				EFAB080D285A2E5900EF7D2D /* RoeVWadeViewController.swift */,
 				EFAB080B285A2E2C00EF7D2D /* AbortionInfoViewController.swift */,
@@ -127,6 +132,7 @@
 				BF88691E2859046800ACF3BB /* LaunchScreen.storyboard */,
 				BF8869212859046800ACF3BB /* Info.plist */,
 				BF8869192859046000ACF3BB /* ROE.xcdatamodeld */,
+				BDE5A348285B0F8C009628CC /* EntryViewController.swift */,
 			);
 			path = ROE;
 			sourceTree = "<group>";
@@ -283,8 +289,10 @@
 				EFAB0806285A270F00EF7D2D /* ResourcesViewController.swift in Sources */,
 				EFAB0808285A2D6C00EF7D2D /* MapViewController.swift in Sources */,
 				EFAB0810285A2E8B00EF7D2D /* FurtherInfoViewController.swift in Sources */,
+				BDE5A34B285B1117009628CC /* NoteViewController.swift in Sources */,
 				BF8869152859046000ACF3BB /* ViewController.swift in Sources */,
 				EFAB080E285A2E5900EF7D2D /* RoeVWadeViewController.swift in Sources */,
+				BDE5A349285B0F8C009628CC /* EntryViewController.swift in Sources */,
 				BF8869112859046000ACF3BB /* AppDelegate.swift in Sources */,
 				BF88691B2859046000ACF3BB /* ROE.xcdatamodeld in Sources */,
 				BF8869132859046000ACF3BB /* SceneDelegate.swift in Sources */,
