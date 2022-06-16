@@ -30,6 +30,7 @@ final class MapViewModel: ObservableObject {
     var locationManager: CLLocationManager
     
 }
+ 
 
     /*
     // MARK: - Navigation
