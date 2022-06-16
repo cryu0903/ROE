@@ -7,23 +7,49 @@
 
 import UIKit
 
-class JournalViewController: UIViewController {
+class JournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet var table: UITableView!
+    @IBOutlet var label : UILabel!
+    
+    var models: [(title: String, note: String )] = []
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.delegate = self
+        table.dataSource = self
 
-        // Do any additional setup after loading the view.
+        title = "Health journal"
+
+       
     }
+    @IBAction func didTapNewNote(){
+        
+    }
+
+    //Table
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
     }
-    */
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = models[indexPath.row].title
+        cell.detailTextLabel?.text = models[indexPath.row].note
 
-}
+        return cell
+        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        //show note controller
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "note")as? NoteViewController else{
+            return
+            }
+        vc.title = "Note"
+        navigationController?.pushViewController(vc, animated:true )
+        }
+    }
+
