@@ -20,7 +20,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.delegate = self
         table.dataSource = self
 
-        title = "Health journal"
+        title = "Health Journal"
 
        
     }
@@ -39,7 +39,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.detailTextLabel?.text = models[indexPath.row].note
 
         return cell
-        }
+    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
@@ -47,7 +47,7 @@ class JournalViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         guard let vc = storyboard?.instantiateViewController(identifier: "note")as? NoteViewController else{
             return
-            }
+        }
         vc.title = "Note"
         navigationController?.pushViewController(vc, animated:true )
         }

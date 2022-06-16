@@ -130,19 +130,6 @@
                                     <action selector="goToScreenThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GeZ-HH-Dmn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJw-ln-s3a">
-                                <rect key="frame" x="214" y="647" width="153" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="reminders">
-                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
-                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goToScreenFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wg0-ap-gpX"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="question_mark-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="KIZ-Wl-79V">
                                 <rect key="frame" x="211" y="121" width="121" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -172,6 +159,20 @@
                                     <action selector="goToScreenTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p8Y-Xj-IWd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJw-ln-s3a">
+                                <rect key="frame" x="214" y="647" width="153" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="reminders">
+                                    <fontDescription key="titleFontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToScreenFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wg0-ap-gpX"/>
+                                    <segue destination="dqr-Uq-VnZ" kind="show" id="1II-CK-8Nm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96001203053378437" green="0.9983363146181935" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,7 +182,6 @@
                         <segue destination="obD-ii-6KG" kind="show" identifier="goToScreenOne" id="EpC-aF-c6F"/>
                         <segue destination="flo-ih-rkQ" kind="show" identifier="goToScreenTwo" id="D2W-Iz-FKc"/>
                         <segue destination="ahV-pa-se6" kind="show" identifier="goToScreenThree" id="2aR-48-O0A"/>
-                        <segue destination="baL-rb-gvV" kind="show" identifier="goToScreenFour" id="DL9-fa-ft7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -258,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gf5-1A-gX9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966.66666666666674" y="870.53571428571422"/>
+            <point key="canvasLocation" x="939" y="871"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="aG5-m0-GCy">
@@ -763,25 +763,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e2g-JH-qX6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pCO-tM-edT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="baL-rb-gvV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="5Kg-ip-HCY"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UEP-un-0fw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dqr-Uq-VnZ" kind="relationship" relationship="rootViewController" id="g1J-Vc-Dda"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OOf-Si-xnH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="56.521739130434788" y="870.53571428571422"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="qhe-LR-ISD">
