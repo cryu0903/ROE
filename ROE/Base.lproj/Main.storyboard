@@ -288,8 +288,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Bans Off Our Bodies">
+                                <buttonConfiguration key="configuration" style="filled" title="Bans Off Our Bodies" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="bansOffOurBodies:" destination="ahV-pa-se6" eventType="touchUpInside" id="eIH-fh-U2x"/>
@@ -300,8 +301,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Donate to Planned Parenthood">
+                                <buttonConfiguration key="configuration" style="filled" title="Donate to Planned Parenthood" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="donate:" destination="ahV-pa-se6" eventType="touchUpInside" id="jId-MQ-TUu"/>
@@ -312,8 +314,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Planned Parenthood Petition">
+                                <buttonConfiguration key="configuration" style="filled" title="Planned Parenthood Petition" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="plannedParenthoodPetitionWithSender:" destination="ahV-pa-se6" eventType="touchUpInside" id="RlZ-Gf-5ni"/>
@@ -324,8 +327,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Chat with a Health Educator">
+                                <buttonConfiguration key="configuration" style="filled" title="Chat with a Health Educator" cornerStyle="capsule">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="chat:" destination="ahV-pa-se6" eventType="touchUpInside" id="hH3-9i-X44"/>
