@@ -191,7 +191,7 @@
         <!--Journal-->
         <scene sceneID="OFP-wq-Vc7">
             <objects>
-                <viewController title="Journal" id="dqr-Uq-VnZ" customClass="JournalViewController" customModule="ROE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Journal" id="dqr-Uq-VnZ" customClass="noteTableView" customModule="ROE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="center" id="gzB-BO-fff">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +213,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aAC-fO-4E7">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aAC-fO-4E7">
                                                     <rect key="frame" x="20" y="6" width="25" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
@@ -249,6 +249,7 @@
                             <color key="tintColor" red="0.17081191079550856" green="0.18032431845239291" blue="0.69072015351443294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="didTapNewNote" destination="dqr-Uq-VnZ" id="N7x-Ki-6Qw"/>
+                                <segue destination="aXL-28-lfT" kind="show" id="2ex-1X-R2q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -267,13 +268,49 @@
                     <view key="view" contentMode="scaleToFill" id="RDA-IC-wUU" customClass="EntryViewController" customModule="ROE" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="imd-NM-xoX">
+                                <rect key="frame" x="56" y="117" width="303" height="34"/>
+                                <color key="textColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Djt-CG-utw">
+                                <rect key="frame" x="186" y="88" width="33" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbo-2m-p0j">
+                                <rect key="frame" x="163" y="165" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8tu-Lr-zRA" customClass="NoteDetailView">
+                                <rect key="frame" x="56" y="194" width="303" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fAt-s4-sWM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98384452011426815" green="0.98835688796547883" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="imd-NM-xoX" firstAttribute="centerX" secondItem="fAt-s4-sWM" secondAttribute="centerX" id="gwF-gh-AaR"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Da3-Yo-jy2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Wpo-kh-2di"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JjS-7a-CgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="871"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="870.53571428571422"/>
         </scene>
         <!--Resources-->
         <scene sceneID="814-Pa-DIM">
@@ -1042,18 +1079,21 @@
         <scene sceneID="dnF-WQ-isU">
             <objects>
                 <viewController id="flo-ih-rkQ" customClass="MapViewController" customModule="ROE" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MTg-bA-CPQ">
+                    <view key="view" contentMode="scaleToFill" id="MTg-bA-CPQ" customClass="MapViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-w4-K2u">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKM-w4-K2u">
                                 <rect key="frame" x="28" y="245" width="358" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinic Near You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LW-ZI-zEN">
-                                <rect key="frame" x="41" y="88" width="333" height="123"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.17081191079999999" green="0.1803243185" blue="0.69072015350000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Near You" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LW-ZI-zEN">
+                                <rect key="frame" x="41" y="88" width="332" height="123"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="KRh-52-UFh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
                                 <color key="textColor" red="0.97467019499999996" green="0.98813533090000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1061,6 +1101,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sad-ZD-GiO"/>
                         <color key="backgroundColor" red="0.96001203049999995" green="0.99833631460000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bKM-w4-K2u" firstAttribute="top" secondItem="4LW-ZI-zEN" secondAttribute="bottom" constant="34" id="CfD-x2-5Af"/>
+                            <constraint firstItem="Sad-ZD-GiO" firstAttribute="trailing" secondItem="bKM-w4-K2u" secondAttribute="trailing" constant="28" id="MMN-Up-Xuk"/>
+                            <constraint firstItem="bKM-w4-K2u" firstAttribute="leading" secondItem="Sad-ZD-GiO" secondAttribute="leading" constant="28" id="T7X-Tx-RRH"/>
+                            <constraint firstItem="4LW-ZI-zEN" firstAttribute="leading" secondItem="Sad-ZD-GiO" secondAttribute="leading" constant="41" id="dOl-i1-Vh8"/>
+                            <constraint firstItem="bKM-w4-K2u" firstAttribute="top" secondItem="4LW-ZI-zEN" secondAttribute="bottom" constant="34" id="hnJ-jj-tX4"/>
+                            <constraint firstItem="4LW-ZI-zEN" firstAttribute="centerX" secondItem="MTg-bA-CPQ" secondAttribute="centerX" id="nhl-xf-qqk"/>
+                            <constraint firstItem="4LW-ZI-zEN" firstAttribute="top" secondItem="Sad-ZD-GiO" secondAttribute="top" id="pdZ-P5-Kde"/>
+                            <constraint firstItem="4LW-ZI-zEN" firstAttribute="centerX" secondItem="bKM-w4-K2u" secondAttribute="centerX" id="v6Y-yC-fJU"/>
+                            <constraint firstItem="Sad-ZD-GiO" firstAttribute="bottom" secondItem="bKM-w4-K2u" secondAttribute="bottom" constant="368" id="vFY-JB-yNa"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="map" destination="bKM-w4-K2u" id="FH7-vO-0X6"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="otq-bC-AeH"/>
                 </viewController>
