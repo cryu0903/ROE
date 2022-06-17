@@ -6,4 +6,21 @@
 //
 
 import UIKit
-class NoteDetailVC
+class NoteDetailVC: UIViewController
+{
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet var DeskVC: EntryViewController!
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+    }
+    
+    
+    
+    
+}
+
