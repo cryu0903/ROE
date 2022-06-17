@@ -4,8 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1536,19 +1534,33 @@
                                 <color key="textColor" red="0.97467019499999996" green="0.98813533090000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1th-rp-eje">
-                                <rect key="frame" x="28" y="523" width="358" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE9-WK-m9c">
+                                <rect key="frame" x="15" y="561" width="384" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="0lI-By-p6z">
-                                    <children>
-                                        <command title="PPC 0.5mi away " id="i0v-6M-5m4"/>
-                                        <command title="PPC 3.4mi away" id="fbC-nN-4Al"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Planned Parenthood Centers Near You">
-                                    <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <color key="tintColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Planned Parenthood 0.5mi away" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planned Parenthoods in your state" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFg-TT-VKy">
+                                <rect key="frame" x="35" y="509" width="299" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PE5-lC-WS7">
+                                <rect key="frame" x="15" y="629" width="384" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Planned Parenthood 6.4mi away" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                    <color key="baseBackgroundColor" red="0.1215686275" green="0.38431372549999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sad-ZD-GiO"/>
@@ -1564,9 +1576,6 @@
                             <constraint firstItem="4LW-ZI-zEN" firstAttribute="centerX" secondItem="bKM-w4-K2u" secondAttribute="centerX" id="v6Y-yC-fJU"/>
                             <constraint firstItem="Sad-ZD-GiO" firstAttribute="bottom" secondItem="bKM-w4-K2u" secondAttribute="bottom" constant="368" id="vFY-JB-yNa"/>
                         </constraints>
-                        <connections>
-                            <outlet property="map" destination="bKM-w4-K2u" id="FH7-vO-0X6"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="otq-bC-AeH"/>
                 </viewController>
@@ -1614,8 +1623,5 @@
         <image name="question_mark-removebg-preview" width="444" height="561"/>
         <image name="ring" width="214.66667175292969" height="219.66667175292969"/>
         <image name="sponge" width="690.33331298828125" height="581.66668701171875"/>
-        <systemColor name="secondarySystemGroupedBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
